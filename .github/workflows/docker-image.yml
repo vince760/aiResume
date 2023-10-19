@@ -1,18 +1,9 @@
- name: AWS ECR
-  # You may pin to the exact commit or the version.
-  # uses: kciter/aws-ecr-action@79255b7c5aa03dbf6d7c46cff2bfd049874cd98d
+- name: AWS ECR
   uses: kciter/aws-ecr-action@v4
   with:
-    # The AWS access key id
     access_key_id: $AWS_ACCESS_KEY_ID
-    # The AWS secret access key
     secret_access_key: $ACCESS_SECRET_KEY
-    # AWS Account ID
     account_id: $AWS_ACCOUNT_ID
-    # A role to assume under the account_id account.
-    assume_role: # optional, default is 
-    # Name of your ECR repository
+    assume_role: null
     repo: $MY_ECR_REPOSITORY
-    # The AWS region
     region: $MY_AWS_REGION
-   
